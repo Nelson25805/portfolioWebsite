@@ -3,25 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to a CSS file for styling -->
+    <title>Nelson McFadyen Project Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to My Project Portfolio</h1>
+        <h1>Nelson McFadyen Project Portfolio</h1>
     </header>
     <main>
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project">
-                <!-- <img src="path/to/project1.jpg" alt="Project 1"> -->
-                <h3>Project 1</h3>
-                <p>Description of Project 1</p>
-                <!-- <a href="https://github.com/username/project1" target="_blank">GitHub Link</a> -->
-                <!-- <a href="https://project1website.com" target="_blank">Website Link</a> -->
+        <section class="project">
+            <h2>CDD Website</h2>
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="images/1.png" alt="Project 1 - Image 1">
+                    <img src="images/2.png" alt="Project 1 - Image 2">
+                    <img src="images/3.png" alt="Project 1 - Image 3">
+                </div>
+                <button class="prev" onclick="prevSlide(0)">&#10094;</button>
+                <button class="next" onclick="nextSlide(0)">&#10095;</button>
             </div>
-            <!-- Add more projects similarly -->
+            <p>Description of Project 1</p>
+        </section>
+
+        <section class="project">
+            <h2>Project 2</h2>
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="images/4.png" alt="Project 2 - Image 1">
+                    <img src="images/5.png" alt="Project 2 - Image 2">
+                </div>
+                <button class="prev" onclick="prevSlide(1)">&#10094;</button>
+                <button class="next" onclick="nextSlide(1)">&#10095;</button>
+            </div>
+            <p>Description of Project 2</p>
         </section>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
