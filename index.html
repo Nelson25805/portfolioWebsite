@@ -15,9 +15,9 @@
             <h2>CDD Website</h2>
             <div class="carousel">
                 <div class="carousel-images">
-                    <img src="images/1.png" alt="Project 1 - Image 1">
-                    <img src="images/2.png" alt="Project 1 - Image 2">
-                    <img src="images/3.png" alt="Project 1 - Image 3">
+                    <img src="images/1.png" alt="Project 1 - Image 1" onclick="openModal(this)">
+                    <img src="images/2.png" alt="Project 1 - Image 2" onclick="openModal(this)">
+                    <img src="images/3.png" alt="Project 1 - Image 3" onclick="openModal(this)">
                 </div>
                 <button class="prev" onclick="prevSlide(0)">&#10094;</button>
                 <button class="next" onclick="nextSlide(0)">&#10095;</button>
@@ -29,8 +29,8 @@
             <h2>Project 2</h2>
             <div class="carousel">
                 <div class="carousel-images">
-                    <img src="images/4.png" alt="Project 2 - Image 1">
-                    <img src="images/5.png" alt="Project 2 - Image 2">
+                    <img src="images/4.png" alt="Project 2 - Image 1" onclick="openModal(this)">
+                    <img src="images/5.png" alt="Project 2 - Image 2" onclick="openModal(this)">
                 </div>
                 <button class="prev" onclick="prevSlide(1)">&#10094;</button>
                 <button class="next" onclick="nextSlide(1)">&#10095;</button>
@@ -38,6 +38,13 @@
             <p>Description of Project 2</p>
         </section>
     </main>
+
+    <!-- Modal Structure -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
 
     <script src="script.js"></script>
 </body>
