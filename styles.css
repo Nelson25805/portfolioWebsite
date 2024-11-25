@@ -19,14 +19,15 @@ header {
     padding: 2rem;
 }
 
+/* Adjust each project section */
 .project {
+    width: 80%; /* Control the width of project sections */
+    max-width: 600px; /* Prevent project sections from getting too wide */
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 1rem;
+    margin: 1rem 0; /* Space between projects */
     padding: 1rem;
-    max-width: 300px;
-    text-align: center;
 }
 
 .project img {
@@ -34,6 +35,13 @@ header {
     border-radius: 8px;
 }
 
+
+main {
+    display: flex;
+    flex-direction: column; /* Stack the projects vertically */
+    align-items: center; /* Center align the project sections */
+    text-align: center; /* Ensures all text is centered */
+}
 
 
 
@@ -70,6 +78,29 @@ button.prev, button.next {
 
 button.prev { left: 10px; }
 button.next { right: 10px; }
+
+.border-container {
+    width: 100%; /* Full viewport width */
+    background: linear-gradient(to right, #ff5733 5%, #ff5733 5%, #fff 5%, #fff 90%, #28a745 90%, #28a745 95%);
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.wrapper {
+    width: 90%; /* Content width */
+    max-width: 1200px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+}
+
+
+
+
+
+
 
 
 
