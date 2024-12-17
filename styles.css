@@ -5,156 +5,153 @@ Style page for the entire portfolio project.
  Last Updated: Nov, 25, 2024
 */
 
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-header {
-    background-color: #333;
+h1, h2, h3 {
+    font-weight: 600;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
     color: #fff;
-    padding: 1rem;
-    text-align: center;
 }
 
-#projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 2rem;
-}
-
-/* Adjust each project section */
-.project {
-    width: 80%; /* Control the width of project sections */
-    max-width: 600px; /* Prevent project sections from getting too wide */
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 1rem 0; /* Space between projects */
-    padding: 1rem;
-}
-
-.project img {
-    max-width: 100%;
-    border-radius: 8px;
-}
-
-
-main {
-    display: flex;
-    flex-direction: column; /* Stack the projects vertically */
-    align-items: center; /* Center align the project sections */
-    text-align: center; /* Ensures all text is centered */
-}
-
-
-
-/* Carousel styles */
-.carousel {
-    position: relative;
-    max-width: 500px; /* Adjust width as needed */
-    margin: auto;
-    overflow: hidden;
-}
-
-.carousel-images {
-    display: flex;
-    transition: transform 0.5s ease;
-    width: 100%; /* This line ensures the flex container is the full width of the carousel */
-}
-
-.carousel-images img {
-    min-width: 100%; /* Ensures each image takes up the full width of the carousel */
-    display: block;
-}
-
-button.prev, button.next {
-    position: absolute;
-    top: 50%;
-    width: 30px;
-    height: 30px;
-    background-color: rgba(0, 0, 0, 0.5);
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('images/hero-bg.jpg') no-repeat center center/cover;
     color: white;
-    border: none;
-    cursor: pointer;
-    transform: translateY(-50%);
+    text-align: center;
+    padding: 3rem 1rem;
 }
 
-button.prev { left: 10px; }
-button.next { right: 10px; }
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
 
-.border-container {
-    width: 100%; /* Full viewport width */
-    background: linear-gradient(to right, #ff5733 5%, #ff5733 5%, #fff 5%, #fff 90%, #28a745 90%, #28a745 95%);
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta {
+    padding: 0.5rem 1rem;
+    background-color: #ff5733;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+    background-color: #c70039;
+}
+
+/* Navbar */
+.navbar {
     display: flex;
     justify-content: center;
-}
-
-
-
-.wrapper {
-    width: 90%; /* Content width */
-    max-width: 1200px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 1rem;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* Modal styling */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 1;
-    padding-top: 60px;
-    left: 0;
+    gap: 1rem;
+    background-color: #333;
+    padding: 0.5rem 0;
+    position: sticky;
     top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
+    z-index: 1000;
 }
 
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-}
-
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
+.navbar a {
     color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
+.navbar a:hover {
+    background-color: #ff5733;
 }
 
-#caption {
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexibly fit items */
+    gap: 2rem; /* Even spacing between items */
+    justify-content: center; /* Center the entire grid */
+    align-content: start; /* Align items to the top */
+    max-width: 1200px; /* Limit the grid's width */
+    margin: 2rem auto; /* Center the grid container */
+    padding: 1rem; /* Add spacing around the grid */
+}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 350px; /* Prevent cards from being too wide */
+    margin: 0 auto; /* Center individual cards within grid cells */
+}
+
+.project-card img {
+    width: 100%;
+    border-bottom: 3px solid #ff5733;
+}
+
+.card-content {
+    padding: 1rem;
     text-align: center;
-    color: #ccc;
-    padding: 10px 20px;
-    height: 150px;
+}
+
+.card-content h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+
+.card-content h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #218838;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
 }

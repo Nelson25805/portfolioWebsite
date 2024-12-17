@@ -13,67 +13,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nelson McFadyen Project Portfolio</title>
+    <title>Nelson McFadyen Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="border-container">
-        <div class="wrapper">
-            <header>
-                <h1>Nelson McFadyen Project Portfolio</h1>
-            </header>
-            <main>
-                <section class="project">
-                    <h2>CDD Website</h2>
-                    <div class="carousel">
-                        <div class="carousel-images">
-                            <img src="images/1.png" alt="Project 1 - Image 1" onclick="openModal(this)">
-                            <img src="images/2.png" alt="Project 1 - Image 2" onclick="openModal(this)">
-                        </div>
-                        <button class="prev" onclick="prevSlide(0)">&#10094;</button>
-                        <button class="next" onclick="nextSlide(0)">&#10095;</button>
-                    </div>
-                    <p>Description of Project 1</p>
-                </section>
-
-                <section class="project">
-                    <h2>IGDB Game Info Searcher</h2>
-                    <div class="carousel">
-                        <div class="carousel-images">
-                            <img src="images/4.png" alt="Project 2 - Image 1" onclick="openModal(this)">
-                            <img src="images/5.png" alt="Project 2 - Image 2" onclick="openModal(this)">
-                        </div>
-                        <button class="prev" onclick="prevSlide(1)">&#10094;</button>
-                        <button class="next" onclick="nextSlide(1)">&#10095;</button>
-                    </div>
-                    <p>Description of Project 2</p>
-                </section>
-
-                <section class="project">
-                    <h2>Recipe Suggester</h2>
-                    <div class="carousel">
-                        <div class="carousel-images">
-                            <img src="images/4.png" alt="Project 3 - Image 1" onclick="openModal(this)">
-                            <img src="images/5.png" alt="Project 3 - Image 2" onclick="openModal(this)">
-                        </div>
-                        <button class="prev" onclick="prevSlide(2)">&#10094;</button>
-                        <button class="next" onclick="nextSlide(2)">&#10095;</button>
-                    </div>
-                    <p>Description of Project 3</p>
-                </section>
-            </main>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Nelson McFadyen</h1>
+            <p>Software Developer | Portfolio Projects</p>
+            <a href="#projects" class="cta">View My Work</a>
         </div>
-    </div>
+    </header>
 
-    <!-- Modal Structure -->
-    <div id="imageModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="modalImage">
-        <div id="caption"></div>
-    </div>
+    <nav class="navbar">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-    <script src="script.js"></script>
+    <main>
+        <section id="projects" class="projects-grid">
+            <h2>My Projects</h2>
+            <div class="project-card">
+                <img src="images/1.png" alt="CDD Website">
+                <div class="card-content">
+                    <h3>CDD Website</h3>
+                    <p>Description of the CDD Website project. Built with XYZ technologies.</p>
+                    <a href="#" class="btn">View Project</a>
+                    <a href="#" class="btn">GitHub Repo</a>
+                </div>
+            </div>
+        
+            <div class="project-card">
+                <img src="images/4.png" alt="IGDB Game Info Searcher">
+                <div class="card-content">
+                    <h3>IGDB Game Info Searcher</h3>
+                    <p>A Python-based app fetching game info from IGDB. Multithreaded API calls.</p>
+                    <a href="#" class="btn">View Project</a>
+                    <a href="#" class="btn">GitHub Repo</a>
+                </div>
+            </div>
+        
+            <div class="project-card">
+                <img src="images/5.png" alt="Recipe Suggester">
+                <div class="card-content">
+                    <h3>Recipe Suggester</h3>
+                    <p>Suggests recipes based on available ingredients using TheMealDB API.</p>
+                    <a href="#" class="btn">View Project</a>
+                    <a href="#" class="btn">GitHub Repo</a>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a software developer with a passion for building functional, user-friendly applications...</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Feel free to reach out to me at <a href="mailto:your.email@example.com">your.email@example.com</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Nelson McFadyen. All Rights Reserved.</p>
+    </footer>
 </body>
 
 </html>
