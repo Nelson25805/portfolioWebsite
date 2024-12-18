@@ -77,15 +77,11 @@ a {
     background-color: #ff5733;
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexibly fit items */
-    gap: 2rem; /* Even spacing between items */
-    justify-content: center; /* Center the entire grid */
-    align-content: start; /* Align items to the top */
-    max-width: 1200px; /* Limit the grid's width */
-    margin: 2rem auto; /* Center the grid container */
-    padding: 1rem; /* Add spacing around the grid */
+.projects-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
 }
 
 .project-card {
@@ -94,7 +90,7 @@ a {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-width: 350px; /* Prevent cards from being too wide */
-    margin: 0 auto; /* Center individual cards within grid cells */
+    margin-bottom: 100px;
 }
 
 .project-card img {
