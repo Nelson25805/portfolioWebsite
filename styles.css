@@ -26,33 +26,78 @@ a {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('images/hero-bg.jpg') no-repeat center center/cover;
+    background: linear-gradient(45deg, #4b0082, #4169e1, #00ced1);
+    background-size: 300% 300%;
     color: white;
     text-align: center;
-    padding: 3rem 1rem;
+    padding: 5rem 1rem;
+    animation: gradientAnimation 12s ease infinite;
 }
 
 .hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1.5s ease forwards;
+    letter-spacing: 2px; /* Adds a touch of elegance */
 }
 
 .hero-content p {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: 0.3s;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .cta {
-    padding: 0.5rem 1rem;
-    background-color: #ff5733;
-    border-radius: 4px;
+    padding: 0.75rem 1.5rem;
+    background-color: #00ced1;
+    color: #fff;
+    border-radius: 25px;
     font-size: 1rem;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 206, 209, 0.3);
 }
 
 .cta:hover {
-    background-color: #c70039;
+    background-color: #00b5ad;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
+
+/* Keyframes for the Gradient Animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Keyframes for Text Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 
 /* Navbar */
 .navbar {
@@ -91,6 +136,11 @@ a {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-width: 60%;
     margin-bottom: 100px;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .project-card img {
@@ -141,6 +191,20 @@ a {
     background-color: #218838;
 }
 
+#about {
+    text-align: center;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#contact {
+    text-align: center;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 
 
 /* Footer */
@@ -148,6 +212,7 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 1rem 0;
+    padding: 2rem 0;
     margin-top: 2rem;
+    font-size: 0.9rem;
 }
