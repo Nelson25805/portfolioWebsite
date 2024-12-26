@@ -136,11 +136,11 @@ a {
 }
 
 .project-card img {
-    width: 80%; 
-    height: 70%;
+    width: 90%; 
     object-fit: cover; /* Crops excess content if needed */
     border-radius: 8px; /* Optional: Smooths the edges for a polished look */
     margin: 0 auto; /* Centers the image */
+    margin-top: 3%;
     display: block; /* Ensures the image aligns properly */
 }
 
