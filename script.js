@@ -1,55 +1,34 @@
-// scripts.js
+let currentIndex = 0; // To track the current position in the carousel
 
-let slideIndex = [0, 0]; // Array size should match the number of project carousels
-
-function nextSlide(projectIndex) {
-    const carousel = document.querySelectorAll('.carousel-images')[projectIndex];
-    const images = carousel.children.length;
-    slideIndex[projectIndex] = (slideIndex[projectIndex] + 1) % images;
-    updateCarousel(projectIndex);
+// Show the large image in the modal
+function showLargeImage(src) {
+    const modal = document.getElementById('imageModal');
+    const largeImage = document.getElementById('largeImage');
+    largeImage.src = src;
+    modal.style.display = "block"; // Show the modal
 }
 
-function prevSlide(projectIndex) {
-    const carousel = document.querySelectorAll('.carousel-images')[projectIndex];
-    const images = carousel.children.length;
-    slideIndex[projectIndex] = (slideIndex[projectIndex] - 1 + images) % images;
-    updateCarousel(projectIndex);
-}
-
-
-function updateCarousel(projectIndex) {
-    const carousel = document.querySelectorAll('.carousel-images')[projectIndex];
-    const offset = -slideIndex[projectIndex] * 100;
-    carousel.style.transform = `translateX(${offset}%)`;
-}
-
-
-
-
-// Get the modal elements
-const modal = document.getElementById("imageModal");
-const modalImg = document.getElementById("modalImage");
-const captionText = document.getElementById("caption");
-const closeBtn = document.querySelector(".close");
-
-// Add click event listeners to all images within the carousel
-document.querySelectorAll('.carousel-images img').forEach(img => {
-    img.onclick = function() {
-        modal.style.display = "block";
-        modalImg.src = this.src;
-        captionText.textContent = this.alt;
-    }
-});
-
-// Close the modal when the 'x' button is clicked
-closeBtn.onclick = function() {
+// Close the modal
+function closeModal() {
+    const modal = document.getElementById('imageModal');
     modal.style.display = "none";
-};
+}
 
-// Close the modal when clicking outside the image
-window.onclick = function(event) {
-    if (event.target === modal) {
-        modal.style.display = "none";
+// Move to the next or previous slide
+function moveSlide(direction) {
+    const carousel = document.querySelector('.carousel');
+    const totalImages = document.querySelectorAll('.carousel img').length;
+
+    // Update the current index based on direction
+    currentIndex += direction;
+
+    // Ensure that the carousel loops around properly
+    if (currentIndex >= totalImages - 2) { // The last index of the valid group of 3 images
+        currentIndex = 0; // Loop back to the first image
+    } else if (currentIndex < 0) {
+        currentIndex = totalImages - 3; // Loop to the last group of images
     }
-};
 
+    // Move the carousel by adjusting its transform property
+    carousel.style.transform = `translateX(-${currentIndex * 33.33}%)`; // Move by 33.33% each time
+}
