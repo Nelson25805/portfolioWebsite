@@ -14,51 +14,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nelson McFadyen Project Portfolio</title>
+    <title>CDDWebsite - Nelson McFadyen Portfolio</title>
     <link rel="stylesheet" href="../styles.css">
 </head>
 
 <body>
     <header class="hero">
         <div class="hero-content">
-            <h1>Nelson McFadyen</h1>
-            <p>Software Developer | Portfolio Projects</p>
-            <a href="../index.html" class="cta">Home Page</a>
+            <h1>CDDWebsite: Video Game Collection Database</h1>
+            <p>React | Node.js | Supabase</p>
+            <a href="../index.html" class="cta">Back to Portfolio</a>
         </div>
     </header>
+
     <main>
         <section class="project">
-            <h2>CDD Website</h2>
+            <h2>Project Overview</h2>
+            <p>The CDDWebsite is a video game collection database site where users can manage their game collections and wishlists. The platform also features an admin panel for database management. Built with React and Node.js, the project utilizes Supabase for data storage and authentication.</p>
+
+            <h2>Key Features</h2>
+            <ul>
+                <li><strong>User Features:</strong> Add games to personal collections and wishlists. Search and filter through the game database.</li>
+                <li><strong>Admin Features:</strong> Manage the database with the ability to add, update, or delete games.</li>
+                <li><strong>Custom Game Additions:</strong> Users can submit new games to the database if they do not already exist.</li>
+            </ul>
+
+            <h2>Technical Details</h2>
+            <ul>
+                <li><strong>Frontend:</strong> React for a dynamic and responsive user interface.</li>
+                <li><strong>Backend:</strong> Node.js and Express.js for API development and server-side logic.</li>
+                <li><strong>Database:</strong> Supabase for user authentication and storing game data.</li>
+                <li><strong>Authentication:</strong> Role-based access control for users and admin accounts, secured with Supabase's built-in authentication features.</li>
+                <li><strong>Deployment:</strong> Hosted on modern cloud platforms like Vercel or Heroku (mention actual platform used).</li>
+            </ul>
+
+            <h2>Challenges & Solutions</h2>
+            <ul>
+                <li><strong>Scalability:</strong> Designed a database schema to efficiently support a large and growing collection of games.</li>
+                <li><strong>Search Optimization:</strong> Implemented efficient filtering and search functionalities to improve performance.</li>
+                <li><strong>Role-Based Access:</strong> Developed a secure admin panel with role-based permissions to manage sensitive data.</li>
+            </ul>
+
+            <h2>Future Improvements</h2>
+            <ul>
+                <li>Add social features like sharing collections with friends.</li>
+                <li>Incorporate data visualization, such as trends and stats in user collections.</li>
+                <li>Enhance the search functionality with advanced filters and sorting options.</li>
+            </ul>
+
+            <h2>Media</h2>
             <div class="carousel-container">
                 <div class="carousel">
-                    <img src="../images/cddWebsiteHome.png" alt="Image 1" onclick="showLargeImage(this.src)">
-                    <img src="../images/igdbGameSearcher.png" alt="Image 2" onclick="showLargeImage(this.src)">
-                    <img src="../images/cddWebsiteHome.png" alt="Image 3" onclick="showLargeImage(this.src)">
-                    <img src="../images/igdbGameSearcher.png" alt="Image 4" onclick="showLargeImage(this.src)">
-                    <img src="../images/igdbGameSearcher.png" alt="Image 5" onclick="showLargeImage(this.src)">
-                    <img src="../images/cddWebsiteHome.png" alt="Image 6" onclick="showLargeImage(this.src)">
+                    <img src="../images/cddWebsiteHome.png" alt="Homepage" onclick="showLargeImage(this.src)">
+                    <img src="../images/igdbGameSearcher.png" alt="Game Searcher" onclick="showLargeImage(this.src)">
                 </div>
-                <!-- Carousel Controls -->
                 <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
                 <button class="next" onclick="moveSlide(1)">&#10095;</button>
             </div>
-        
+
             <div class="modal" id="imageModal" onclick="closeModal()">
                 <span class="close">&times;</span>
                 <img class="modal-content" id="largeImage">
             </div>
-            
-            <p>This is a website collection for video games.</p>
+
+            <h2>Key Takeaways</h2>
+            <p>This project helped me enhance my skills in API development, database management, and role-based access control. It showcases my ability to design, develop, and deploy a full-stack web application with a focus on scalability and user experience.</p>
         </section>
     </main>
 
     <footer>
         <p>© 2024 Nelson McFadyen. All Rights Reserved.</p>
     </footer>
+
     <script src="../script.js"></script>
 </body>
-
-
-
 
 </html>
