@@ -146,8 +146,9 @@ a {
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
+    transform: scale(1.03);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-content {
@@ -178,7 +179,9 @@ a {
 }
 
 .btn:hover {
-    background-color: #218838;
+    transform: scale(1.05);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    background-color: #1e7e34; /* Darker green */
 }
 
 #about {
@@ -201,7 +204,6 @@ footer {
     color: white;
     text-align: center;
     padding: 2rem 0;
-    margin-top: 2rem;
     font-size: 0.9rem;
 }
 
@@ -270,15 +272,17 @@ footer {
     width: 100%; /* Full-screen modal */
     height: 100%; /* Full-screen modal */
     background-color: rgba(0, 0, 0, 0.9); /* Background overlay */
+    animation: fadeInModal 0.5s ease; /* Smooth fade-in effect */
   }
   
-  .modal-content {
-    margin: auto;
-    margin-top: 150px;
-    display: block;
+ .modal-content {
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
     width: 80%;
     max-width: 700px;
-  }
+}
   
   .close {
     position: absolute;
@@ -293,7 +297,21 @@ footer {
   .close:hover,
   .close:focus {
     color: #bbb;
-    text-decoration: none;
     cursor: pointer;
   }
+
+  /* Fade-in animation for modal */
+@keyframes fadeInModal {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
   
