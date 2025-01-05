@@ -1,47 +1,95 @@
 <!-- 
- This page is designed to showcase amy recipeSuggester project.
+ This page is designed to showcase my Recipe Suggester project.
  It showcases videos, pictures, and has descriptions of the project listed.
- As well as displaying my github link to the project.
+ As well as displaying my GitHub link to the project.
 
  Author: Nelson McFadyen
- Last Updated: Nov, 25, 2024
-
+ Last Updated: Jan 5, 2025
 -->
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nelson McFadyen Project Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Recipe Suggester - Nelson McFadyen Portfolio</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
+
 <body>
-    <header>
-        <h1>Nelson McFadyen Project Portfolio</h1>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Recipe Suggester</h1>
+            <p>Java | API Integration | Terminal Interaction</p>
+            <a href="../index.html" class="cta">Home Page</a>
+        </div>
     </header>
+
     <main>
         <section class="project">
-            <h2>CDD Website</h2>
-            <div class="carousel">
-                <div class="carousel-images">
-                    <img src="images/1.png" alt="Project 1 - Image 1" onclick="openModal(this)">
-                    <img src="images/2.png" alt="Project 1 - Image 2" onclick="openModal(this)">
+            <h2>Project Overview</h2>
+            <p>The Recipe Suggester is a Java-based terminal application that helps users find recipes based on their preferred main ingredient. It interacts with an external API to fetch recipes and provides details about ingredients, cooking instructions, and links to dish images. Users can also save their favorite recipes to a text file for later reference.</p>
+
+            <h2>Key Features</h2>
+            <ul>
+                <li><strong>Ingredient-Based Search:</strong> Users can specify a main ingredient, and the application fetches relevant recipes using an API.</li>
+                <li><strong>Recipe Details:</strong> View ingredients, step-by-step cooking instructions, and a link to a picture of the dish.</li>
+                <li><strong>Save Recipes:</strong> Option to save recipe details to a text file for future use.</li>
+            </ul>
+
+            <h2>Technical Details</h2>
+            <ul>
+                <li><strong>Programming Language:</strong> Java for backend logic and API integration.</li>
+                <li><strong>API:</strong> Utilizes TheMealDB API to fetch recipe data.</li>
+                <li><strong>Data Handling:</strong> Parses JSON responses to extract recipe details for display and saving.</li>
+                <li><strong>File Management:</strong> Implements file handling to save recipes in a structured text format.</li>
+            </ul>
+
+            <h2>Challenges & Solutions</h2>
+            <ul>
+                <li><strong>API Integration:</strong> Handled inconsistencies in API responses with robust error handling and validation logic.</li>
+                <li><strong>User Interaction:</strong> Designed intuitive terminal prompts for seamless user experience.</li>
+                <li><strong>File Saving:</strong> Ensured saved recipes are well-formatted and easy to read by implementing structured output in text files.</li>
+            </ul>
+
+            <h2>Future Improvements</h2>
+            <ul>
+                <li>Add a graphical user interface (GUI) for a more interactive experience.</li>
+                <li>Implement advanced search options, such as filtering recipes by cuisine or dietary preferences.</li>
+                <li>Enhance saved recipe management with features like editing or deleting entries.</li>
+            </ul>
+
+            <h2>Media</h2>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <img src="../images/cddWebsiteHome.png" alt="Homepage" onclick="showLargeImage(this.src)">
+                    <img src="../images/igdbGameSearcher.png" alt="Game Searcher" onclick="showLargeImage(this.src)">
+                    <img src="../images/cddWebsiteHome.png" alt="Homepage" onclick="showLargeImage(this.src)">
+                    <img src="../images/igdbGameSearcher.png" alt="Game Searcher" onclick="showLargeImage(this.src)">
                 </div>
-                <button class="prev" onclick="prevSlide(0)">&#10094;</button>
-                <button class="next" onclick="nextSlide(0)">&#10095;</button>
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
             </div>
-            <p>Description of Project 1</p>
+
+            <div class="modal" id="imageModal" onclick="closeModal()">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="largeImage">
+            </div>
+
+            <h2>Key Takeaways</h2>
+            <p>This project enhanced my skills in Java programming, API integration, and user interaction design through terminal applications. It demonstrates my ability to develop functional, user-centric applications with practical features like recipe saving.</p>
+
+            <h2>GitHub Link</h2>
+            <p>You can view the code for this project on my <a href="https://github.com/yourusername/recipe-suggester" target="_blank">GitHub repository</a>.</p>
         </section>
     </main>
 
-    <!-- Modal Structure -->
-    <div id="imageModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="modalImage">
-        <div id="caption"></div>
-    </div>
+    <footer>
+        <p>© 2025 Nelson McFadyen. All Rights Reserved.</p>
+    </footer>
 
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
 </body>
+
 </html>
