@@ -1,11 +1,10 @@
 <!-- 
- This page is designed to showcase amy igdbGameInfo project.
+ This page is designed to showcase my IGDB Game Data Fetcher project.
  It showcases videos, pictures, and has descriptions of the project listed.
- As well as displaying my github link to the project.
+ As well as displaying my GitHub link to the project.
 
  Author: Nelson McFadyen
- Last Updated: Nov, 25, 2024
-
+ Last Updated: Jan 4, 2025
 -->
 
 <!DOCTYPE html>
@@ -14,51 +13,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nelson McFadyen Project Portfolio</title>
+    <title>IGDB Game Data Fetcher - Nelson McFadyen Portfolio</title>
     <link rel="stylesheet" href="../styles.css">
 </head>
 
 <body>
     <header class="hero">
         <div class="hero-content">
-            <h1>Nelson McFadyen</h1>
-            <p>Software Developer | Portfolio Projects</p>
+            <h1>IGDB Game Data Fetcher</h1>
+            <p>Python | API Integration | Excel Export</p>
             <a href="../index.html" class="cta">Home Page</a>
         </div>
     </header>
+
     <main>
         <section class="project">
-            <h2>CDD Website</h2>
+            <h2>Project Overview</h2>
+            <p>The IGDB Game Data Fetcher is a Python-based project designed to interact with the IGDB API to fetch detailed video game information. It allows users to search for games, view relevant data, and save results into an Excel sheet for offline use or further analysis.</p>
+
+            <h2>Key Features</h2>
+            <ul>
+                <li><strong>Game Search:</strong> Search the IGDB database for detailed information about games, including titles, genres, and release dates.</li>
+                <li><strong>Excel Export:</strong> Save search results into an organized Excel sheet for easy access and sharing.</li>
+                <li><strong>Customizable Queries:</strong> Tailor API calls to fetch specific types of game data.</li>
+            </ul>
+
+            <h2>Technical Details</h2>
+            <ul>
+                <li><strong>Programming Language:</strong> Python for backend logic and API integration.</li>
+                <li><strong>API:</strong> Uses the IGDB API for fetching game-related data.</li>
+                <li><strong>Data Handling:</strong> Parsed JSON responses from the API and structured them into an Excel-friendly format using libraries like pandas and openpyxl.</li>
+                <li><strong>Rate Limiting:</strong> Implemented efficient request management to adhere to IGDB’s API rate limits.</li>
+            </ul>
+
+            <h2>Challenges & Solutions</h2>
+            <ul>
+                <li><strong>Rate Limits:</strong> Designed a queue system to manage API requests within IGDB’s constraints, avoiding errors and delays.</li>
+                <li><strong>Data Formatting:</strong> Created a user-friendly Excel template to make saved data easy to read and use.</li>
+                <li><strong>Image Handling:</strong> Integrated logic to fetch and save cover art for games when available, avoiding errors from missing fields.</li>
+            </ul>
+
+            <h2>Future Improvements</h2>
+            <ul>
+                <li>Enhance the GUI to make it more user-friendly and visually appealing.</li>
+                <li>Introduce additional data visualization options, such as charts or graphs within Excel outputs.</li>
+                <li>Implement search result caching to reduce redundant API calls.</li>
+            </ul>
+
+            <h2>Media</h2>
             <div class="carousel-container">
                 <div class="carousel">
-                    <img src="../images/cddWebsiteHome.png" alt="Image 1" onclick="showLargeImage(this.src)">
-                    <img src="../images/igdbGameSearcher.png" alt="Image 2" onclick="showLargeImage(this.src)">
-                    <img src="../images/cddWebsiteHome.png" alt="Image 3" onclick="showLargeImage(this.src)">
-                    <img src="../images/igdbGameSearcher.png" alt="Image 4" onclick="showLargeImage(this.src)">
-                    <img src="../images/igdbGameSearcher.png" alt="Image 5" onclick="showLargeImage(this.src)">
-                    <img src="../images/cddWebsiteHome.png" alt="Image 6" onclick="showLargeImage(this.src)">
+                    <img src="../images/cddWebsiteHome.png" alt="Homepage" onclick="showLargeImage(this.src)">
+                    <img src="../images/igdbGameSearcher.png" alt="Game Searcher" onclick="showLargeImage(this.src)">
                 </div>
-                <!-- Carousel Controls -->
                 <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
                 <button class="next" onclick="moveSlide(1)">&#10095;</button>
             </div>
-        
+
             <div class="modal" id="imageModal" onclick="closeModal()">
                 <span class="close">&times;</span>
                 <img class="modal-content" id="largeImage">
             </div>
-            
-            <p>This is a video game search application.</p>
+
+
+            <h2>Key Takeaways</h2>
+            <p>This project improved my skills in working with APIs, handling JSON data, and creating organized Excel outputs. It also demonstrated the importance of managing rate limits and optimizing data flow in API-driven applications.</p>
+
+            <h2>GitHub Link</h2>
+            <p>You can view the code for this project on my <a href="https://github.com/yourusername/igdb-game-data-fetcher" target="_blank">GitHub repository</a>.</p>
         </section>
     </main>
 
     <footer>
-        <p>© 2024 Nelson McFadyen. All Rights Reserved.</p>
+        <p>© 2025 Nelson McFadyen. All Rights Reserved.</p>
     </footer>
+
     <script src="../script.js"></script>
 </body>
-
-
-
 
 </html>
